@@ -23,11 +23,18 @@
         </header>
     </div>
     <nav>
-    <ul id="menu">
-        <li> <asp:Label ID="LabelQuienes" runat="server" Text="¿Quienes Somos?"></asp:Label></li>
-        <li> <asp:Label ID="LabelProductos" runat="server" Text="Productos"></asp:Label></li>
-        <li> <asp:Label ID="LabelContacto" runat="server" Text="Contactenos"></asp:Label></li>
-    </ul>
+      <div id="divMenu">
+        <ul id="menu">
+         <li class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/QuienesSomos.aspx" ID="HyperLinkQuienes" runat="server">¿Quienes Somos?</asp:HyperLink> </li>
+         <li class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/Productos.aspx" ID="HyperLinkProductos" runat="server">Productos</asp:HyperLink> </li>
+         <li class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/Contacto.aspx"   ID="HyperLinkContacto" runat="server">Contactanos</asp:HyperLink> </li>
+         </ul>
+        </div>
+        <div id="divLogin">
+            <asp:ContentPlaceHolder  ID="ContentPlaceHolderCuadroLogin" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
     </nav>
     <form id="formLogin" runat="server">
         <div>

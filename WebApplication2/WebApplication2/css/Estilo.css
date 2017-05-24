@@ -24,3 +24,30 @@ header
     align-items: center;
   
 }
+nav{
+    display:flex;
+    flex-direction:row;
+}
+#divMenu{
+    width: 600px;
+}
+#menu{
+    list-style:none;
+   float:left;
+}
+
+.liMenu {
+    width: 150px;
+    border: 2px solid #186BF2;
+    border-radius: 10px 10px;
+    background-color: #4689F4;
+}
+.navegador {
+    color: antiquewhite;
+ 
+    text-decoration: none;
+}
+
+#divLogin{
+    width:600px;
+}

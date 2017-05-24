@@ -22,31 +22,40 @@ namespace WebApplication2 {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
-        /// Control LabelQuienes.
+        /// Control HyperLinkQuienes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelQuienes;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkQuienes;
         
         /// <summary>
-        /// Control LabelProductos.
+        /// Control HyperLinkProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelProductos;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkProductos;
         
         /// <summary>
-        /// Control LabelContacto.
+        /// Control HyperLinkContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelContacto;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkContacto;
+        
+        /// <summary>
+        /// Control ContentPlaceHolderCuadroLogin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderCuadroLogin;
         
         /// <summary>
         /// Control formLogin.
