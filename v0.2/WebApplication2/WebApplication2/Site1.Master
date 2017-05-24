@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Todo Tech</title>
+    <link href="css/Estilo.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="divHeader">
+        <header id="header">
+            <div id="divLogo">
+              <img src="FotosEstilo/Logo.png" id="logo" /> 
+            </div>
+            <div id="slogan">
+                <h1 id="eslogan">Tu centro tecnologio</h1>
+
+            </div>
+        </header>
+    </div>
+    <nav>
+    <ul id="menu">
+        <li> <asp:Label ID="LabelQuienes" runat="server" Text="¿Quienes Somos?"></asp:Label></li>
+        <li> <asp:Label ID="LabelProductos" runat="server" Text="Productos"></asp:Label></li>
+        <li> <asp:Label ID="LabelContacto" runat="server" Text="Contactenos"></asp:Label></li>
+    </ul>
+    </nav>
+    <form id="formLogin" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div>
+        <ul>
+            <li>  <asp:HyperLink ID="HyperLinkVideo" NavigateUrl="~/WebForm1.aspx" runat="server">Tarjeta de Video</asp:HyperLink></li>
+             <li>  <asp:HyperLink  ID="HyperLinkPlaca" NavigateUrl="~/WebForm1.aspx" runat="server">Placa Madre</asp:HyperLink></li>
+             <li>  <asp:HyperLink ID="HyperLinkGabinetes" NavigateUrl="~/WebForm1.aspx" runat="server">Gabinetes</asp:HyperLink></li>
+             <li>  <asp:HyperLink ID="HyperLinkProcesador" NavigateUrl="~/WebForm1.aspx" runat="server">Procesador</asp:HyperLink></li>
+             <li>  <asp:HyperLink ID="HyperLinkRam" NavigateUrl="~/WebForm1.aspx" runat="server">Memoria RAM</asp:HyperLink></li>
+             <li>  <asp:HyperLink ID="HyperLinkMonitores" NavigateUrl="~/WebForm1.aspx" runat="server">Monitores</asp:HyperLink></li>
+             <li>  <asp:HyperLink ID="HyperLinkSSD" NavigateUrl="~/WebForm1.aspx" runat="server">Unidad de estado Solido (SSD)</asp:HyperLink></li>
+            <li>  <asp:HyperLink ID="HyperLinkFuente" NavigateUrl="~/WebForm1.aspx" runat="server">Fuente de poder</asp:HyperLink></li>
+            <li>  <asp:HyperLink ID="HyperLinkMouse" NavigateUrl="~/WebForm1.aspx" runat="server">Mouse</asp:HyperLink></li>
+            <li>  <asp:HyperLink ID="HyperLinkDisco" NavigateUrl="~/WebForm1.aspx" runat="server">Disco duro</asp:HyperLink></li>
+            <li>  <asp:HyperLink ID="HyperLinkCooler" NavigateUrl="~/WebForm1.aspx" runat="server">Cooler</asp:HyperLink></li>
+
+             
+        </ul>
+    </div>
+    <footer>
+        <div>
+            <h2>mostrar variable de session</h2>
+        </div>
+        <div>
+            <asp:Label ID="LabelDatos" runat="server" Text="Direccion, comuna, ciudad fono: 15211234501"></asp:Label>
+        </div>
+    </footer>
+</body>
+</html>
