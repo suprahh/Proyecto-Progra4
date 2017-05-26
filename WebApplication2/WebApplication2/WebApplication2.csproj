@@ -70,6 +70,7 @@
     <Content Include="Forms\Productos.aspx" />
     <Content Include="Forms\QuienesSomos.aspx" />
     <Content Include="packages.config" />
+    <Content Include="script\script.sql" />
     <Content Include="Site1.Master" />
     <None Include="Forms\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -93,6 +94,10 @@
     <Content Include="Forms\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Clases\Datos.cs" />
+    <Compile Include="Clases\Producto.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Forms\Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +134,9 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FotoArticulos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
