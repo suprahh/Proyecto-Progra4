@@ -66,7 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Forms\Contacto.aspx" />
+    <Content Include="Forms\MantenedorProductos.aspx" />
     <Content Include="Forms\Principal.aspx" />
+    <Content Include="Forms\PrincipalAdministracion.aspx" />
     <Content Include="Forms\Productos.aspx" />
     <Content Include="Forms\QuienesSomos.aspx" />
     <Content Include="packages.config" />
@@ -105,12 +107,26 @@
     <Compile Include="Forms\Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MantenedorProductos.aspx.cs">
+      <DependentUpon>MantenedorProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MantenedorProductos.aspx.designer.cs">
+      <DependentUpon>MantenedorProductos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\Principal.aspx.designer.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrincipalAdministracion.aspx.cs">
+      <DependentUpon>PrincipalAdministracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PrincipalAdministracion.aspx.designer.cs">
+      <DependentUpon>PrincipalAdministracion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
