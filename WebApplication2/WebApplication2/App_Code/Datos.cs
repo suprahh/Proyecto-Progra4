@@ -18,7 +18,7 @@ namespace WebApplication2.Clases
             int privilegio = user.Privilegio == true ? 1 : 0;
             string consulta = "insert into TBL_USUARIOS(RUT, NOMBRE_USER, EMAIL_USER, USERNAME, PASSWORD, TIPO_USER ) values (" +
                                                                                                                                 user.Rut + ",'" +
-                                                                                                                                user.Nombre1 + "','" +
+                                                                                                                                user.Nombre + "','" +
                                                                                                                                 user.Mail + "','" +
                                                                                                                                 user.Username + "','" +
                                                                                                                                 user.Password + "'," +

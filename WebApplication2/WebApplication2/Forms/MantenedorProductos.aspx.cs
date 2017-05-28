@@ -13,5 +13,10 @@ namespace WebApplication2.Forms
         {
 
         }
+
+        protected void ButtonAgregarProducto_Click(object sender, EventArgs e)
+        {
+            PanelAgregarProducto.Visible = true; ;
+        }
     }
 }

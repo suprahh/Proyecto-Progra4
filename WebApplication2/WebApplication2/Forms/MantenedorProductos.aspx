@@ -11,7 +11,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <table style="width: 100%;">
         <tr>
-            <td class="auto-style1"> <asp:Button ID="ButtonAgregarProducto" runat="server" Text="Agregar  Producto" OnClick="ButtonAgregarProducto_Click" /> </td>
+            <td class="auto-style1"> <asp:Button ID="ButtonAgregarProducto" runat="server" Text="Agregar Producto" OnClick="ButtonAgregarProducto_Click" /> </td>
             <td class="auto-style2"> <asp:Button ID="ButtonBUscarProducto" runat="server" Text="Buscar Producto" /></td>
         </tr>
           <tr>
@@ -28,7 +28,7 @@
                   <asp:FileUpload ID="FileUploadFoto" runat="server" /><br />
                   <asp:Label ID="Label6" runat="server" Text="Categoria : "></asp:Label>
                   <asp:DropDownList ID="DropDownListCategoria" runat="server"></asp:DropDownList><br />
-                  <asp:Button ID="ButtonInsertProducto" runat="server" Text="Agregar" OnClick="ButtonInsertProducto_Click" Width="117px" />
+                  <asp:Button ID="ButtonInsertProducto" runat="server" Text="Agregar"  Width="117px" />
 
                    </asp:Panel> 
               </table>

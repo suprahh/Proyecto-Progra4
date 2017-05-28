@@ -96,10 +96,10 @@
     <Content Include="Forms\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Clases\Datos.cs" />
-    <Compile Include="Clases\Producto.cs" />
-    <Compile Include="Clases\Usuario.cs" />
+    <Compile Include="App_Code\Conexion.cs" />
+    <Compile Include="App_Code\Datos.cs" />
+    <Compile Include="App_Code\Producto.cs" />
+    <Compile Include="App_Code\Usuario.cs" />
     <Compile Include="Forms\Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
