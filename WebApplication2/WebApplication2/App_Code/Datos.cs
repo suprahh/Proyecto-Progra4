@@ -38,10 +38,11 @@ namespace WebApplication2.Clases
 
         public static bool AgregarProducto (Producto p)
         {
+            
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "insert into TBL_PRODUCTO (NOM_PRO, DESCRIPCION_PRO, PRECIO_PRO, STOCK_PRO, FOTO_PRO, ID_CAT) value ('" + p.Nombre + "','" +
+            string consulta = "insert into TBL_PRODUCTO (NOM_PRO, DESCRIPCION_PRO, PRECIO_PRO, STOCK_PRO, FOTO_PRO, ID_CAT) values ('" + p.Nombre + "','" +
                                                                                                                                       p.Descripcion + "'," +
                                                                                                                                       p.Precio + "," +
                                                                                                                                       p.Stock + ",'" +
@@ -61,6 +62,11 @@ namespace WebApplication2.Clases
             }
 
         }
+
+     /*   public static Producto BproductoId ()
+        {
+
+        } */
 
       
 

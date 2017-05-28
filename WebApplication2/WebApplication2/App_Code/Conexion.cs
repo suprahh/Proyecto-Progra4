@@ -9,7 +9,7 @@ namespace WebApplication2
     {
         public string Conectar()
         {
-            string cadena = "cadena";
+            string cadena = "Data Source=DESKTOP-3DJ3N69\\DBCARLOS;Initial Catalog=proyecto_progra4;Integrated Security=True";
             return cadena;
         }
 
