@@ -16,7 +16,7 @@ namespace WebApplication2.Clases
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
             int privilegio = user.Privilegio == true ? 1 : 0;
-            string consulta = "insert into TBL_USUARIOS(RUT, NOMBRE_USER, EMAIL_USER, USERNAME, PASSWORD, TIPO_USER ) values (" +
+            string consulta = "insert into TAB_USUARIOS(RUT, NOMBRE_USER, EMAIL_USER, USERNAME, PASSWORD, TIPO_USER ) values (" +
                                                                                                                                 user.Rut + ",'" +
                                                                                                                                 user.Nombre + "','" +
                                                                                                                                 user.Mail + "','" +
@@ -42,7 +42,7 @@ namespace WebApplication2.Clases
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "insert into TBL_PRODUCTO (NOM_PRO, DESCRIPCION_PRO, PRECIO_PRO, STOCK_PRO, FOTO_PRO, ID_CAT) values ('" + p.Nombre + "','" +
+            string consulta = "insert into TAB_PRODUCTO (NOM_PRO, DESCRIPCION_PRO, PRECIO_PRO, STOCK_PRO, FOTO_PRO, ID_CAT) values ('" + p.Nombre + "','" +
                                                                                                                                       p.Descripcion + "'," +
                                                                                                                                       p.Precio + "," +
                                                                                                                                       p.Stock + ",'" +

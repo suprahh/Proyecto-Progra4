@@ -55,11 +55,11 @@ namespace WebApplication2.Forms
             p.IdCategoria=int.Parse(DropDownListCategoria.SelectedValue);
             if (Datos.AgregarProducto(p))
             {
-                LabelRespuestaAgregar.Text = "agregado exitosamente";
+                this.Page.Response.Write("<script language='JavaScript'>window.alert('se agrego correctamente');</script>");
             }
             else
             {
-                LabelRespuestaAgregar.Text = "un error al agregar producto";
+                this.Page.Response.Write("<script language='JavaScript'>window.alert('error al ingresar producto');</script>");
             }
 
         }

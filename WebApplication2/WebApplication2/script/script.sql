@@ -1,4 +1,4 @@
-﻿USE [PCfastory]
+﻿USE [Pcfastory]
 GO
 /****** Object:  Table [dbo].[TAB_CATEGORIA]    Script Date: 25-05-2017 15:06:20 ******/
 SET ANSI_NULLS ON

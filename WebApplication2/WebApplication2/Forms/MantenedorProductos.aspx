@@ -38,7 +38,7 @@
                   <asp:FileUpload ID="FileUploadFoto" runat="server" /><br />
                   <asp:Label ID="Label6" runat="server" Text="Categoria : "></asp:Label>
                   <asp:DropDownList ID="DropDownListCategoria" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="NOM_CAT" DataValueField="ID_CAT"></asp:DropDownList>
-                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:proyecto_progra4ConnectionString %>" SelectCommand="SELECT * FROM [TAB_CATEGORIA]"></asp:SqlDataSource>
+                  <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PcfastoryConnectionString %>" SelectCommand="SELECT * FROM [TAB_CATEGORIA]"></asp:SqlDataSource>
                   <br />
                   <asp:Button ID="ButtonInsertProducto" runat="server" Text="Agregar"  Width="117px" OnClick="ButtonInsertProducto_Click" /><br />
                   <asp:Label ID="LabelRespuestaAgregar" runat="server" Text=""></asp:Label>

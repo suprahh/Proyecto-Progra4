@@ -44,7 +44,7 @@
     </form>
     <div>
         <ul>
-            <li>  <asp:HyperLink ID="HyperLinkVideo" NavigateUrl="~/Forms/MantenedorProductos.aspx" runat="server">Tarjeta de Video</asp:HyperLink></li>
+            <li>  <asp:HyperLink  ID="HyperLinkVideo" NavigateUrl="~/Forms/MantenedorProductos.aspx" runat="server">Tarjeta de Video</asp:HyperLink></li>
              <li>  <asp:HyperLink  ID="HyperLinkPlaca" NavigateUrl="~/WebForm1.aspx" runat="server">Placa Madre</asp:HyperLink></li>
              <li>  <asp:HyperLink ID="HyperLinkGabinetes" NavigateUrl="~/WebForm1.aspx" runat="server">Gabinetes</asp:HyperLink></li>
              <li>  <asp:HyperLink ID="HyperLinkProcesador" NavigateUrl="~/WebForm1.aspx" runat="server">Procesador</asp:HyperLink></li>
