@@ -19,6 +19,8 @@ namespace WebApplication2.Forms
         {
             PanelAgregarProducto.Visible = true;
             PanelMostrarProducto.Visible = false;
+           
+            
         }
 
         protected void DropDownListInfoProducto_SelectedIndexChanged(object sender, EventArgs e)
