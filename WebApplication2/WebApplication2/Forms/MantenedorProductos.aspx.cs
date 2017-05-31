@@ -71,15 +71,21 @@ namespace WebApplication2.Forms
 
         protected void ButtonBuscarP_Click(object sender, EventArgs e)
         {
-
+            List<Producto> productos = new List<Producto>();
             switch (int.Parse(DropDownListInfoProducto.SelectedValue))
             {
+             
                case 1:
-                    
+                    PanelProductoDataList.Visible = true;
+                    PanelProductoEncontrado.Visible = false;
+                    GridViewProductosEncontrados.DataSource = Datos.BproductoNombre(TextBoxBusquedaP.Text);
+                    GridViewProductosEncontrados.DataBind();
                     break;
                 case 2:
-                    PanelProductoDataList.Visible = true;
-                    List<Producto> productos = new List<Producto>();
+
+                    PanelProductoDataList.Visible = false;
+                    PanelProductoEncontrado.Visible = true;
+                   
                     Producto p = Datos.BproductoId(int.Parse(TextBoxBusquedaP.Text));
 
                     productos.Add(p);
@@ -87,6 +93,10 @@ namespace WebApplication2.Forms
                     DetailsViewProducto.DataBind();
                     break;
                 case 3:
+                    PanelProductoDataList.Visible = true;
+                    PanelProductoEncontrado.Visible = false;
+                    GridViewProductosEncontrados.DataSource = Datos.BproductoPrecio(int.Parse(TextBoxBusquedaP.Text));
+                    GridViewProductosEncontrados.DataBind();
                     break;
                 
 

@@ -7,6 +7,7 @@ namespace WebApplication2.Clases
 {
     public class Producto
     {
+        private int id;
         private string nombre;
         private string descripcion;
         private int  precio;
@@ -19,6 +20,11 @@ namespace WebApplication2.Clases
 
         }
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
         public int IdCategoria
         {
             get { return idCategoria; }

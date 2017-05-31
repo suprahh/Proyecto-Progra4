@@ -10,7 +10,7 @@ namespace WebApplication2.Clases
 {
     public static class Datos
     {
-        public static bool AgregarUsuario (Usuario user)
+        public static bool AgregarUsuario(Usuario user)
         {
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
@@ -24,7 +24,7 @@ namespace WebApplication2.Clases
                                                                                                                                 user.Password + "'," +
                                                                                                                                 privilegio + ")";
             SqlCommand conCadena = new SqlCommand(consulta, con);
-            if (conCadena.ExecuteNonQuery()==1)
+            if (conCadena.ExecuteNonQuery() == 1)
             {
                 con.Close();
                 return true;
@@ -36,9 +36,9 @@ namespace WebApplication2.Clases
             }
         }
 
-        public static bool AgregarProducto (Producto p)
+        public static bool AgregarProducto(Producto p)
         {
-            
+
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
@@ -49,7 +49,7 @@ namespace WebApplication2.Clases
                                                                                                                                       p.Foto + "'," +
                                                                                                                                       p.IdCategoria + ")";
             SqlCommand conCadena = new SqlCommand(consulta, con);
-            if (conCadena.ExecuteNonQuery()==1)
+            if (conCadena.ExecuteNonQuery() == 1)
             {
                 con.Close();
                 return true;
@@ -58,12 +58,12 @@ namespace WebApplication2.Clases
             {
                 con.Close();
                 return false;
-           
+
             }
 
         }
 
-        public static Producto  BproductoId (int id)
+        public static Producto BproductoId(int id)
         {
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
@@ -72,20 +72,21 @@ namespace WebApplication2.Clases
             SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
-            
-                Producto p = new Producto();
-                foreach (DataRow row in tabla.Rows)
-                {
-                    p.Nombre =(string) row[1];
-                    p.Descripcion = (string)row[2];
-                    p.Precio = (int)row[3];
-                    p.Stock = (int)row[4];
-                    p.Foto = (string)row[5];
-                    p.IdCategoria = (int)row[6];
-                   
-                }
+
+            Producto p = new Producto();
+            foreach (DataRow row in tabla.Rows)
+            {
+
+                p.Nombre = (string)row[1];
+                p.Descripcion = (string)row[2];
+                p.Precio = (int)row[3];
+                p.Stock = (int)row[4];
+                p.Foto = (string)row[5];
+                p.IdCategoria = (int)row[6];
+
+            }
             return p;
-           }
+        }
 
         public static List<Producto> BproductoNombre(string nombre)
         {
@@ -93,15 +94,16 @@ namespace WebApplication2.Clases
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "select * from TAB_PRODUCTO where NOM_PRO like '%"+ nombre +"%'";
+            string consulta = "select * from TAB_PRODUCTO where NOM_PRO like '%" + nombre + "%'";
             SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
 
             Producto p = new Producto();
-           
+
             foreach (DataRow row in tabla.Rows)
             {
+                p.Id = (int)row[0];
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
                 p.Precio = (int)row[3];
@@ -113,7 +115,35 @@ namespace WebApplication2.Clases
             return productos;
         }
 
+        public static List<Producto> BproductoPrecio(int precio)
+        {
+            List<Producto> productos = new List<Producto>();
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "select * from TAB_PRODUCTO where PRECIO_PRO = " + precio;
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            DataTable tabla = new DataTable();
+            conCadena.Fill(tabla);
+
+            Producto p = new Producto();
+
+            foreach (DataRow row in tabla.Rows)
+            {
+                p.Id = (int)row[0];
+                p.Nombre = (string)row[1];
+                p.Descripcion = (string)row[2];
+                p.Precio = (int)row[3];
+                p.Stock = (int)row[4];
+                p.Foto = (string)row[5];
+                p.IdCategoria = (int)row[6];
+                productos.Add(p);
+            }
+            return productos;
 
 
+
+
+        }
     }
 }
