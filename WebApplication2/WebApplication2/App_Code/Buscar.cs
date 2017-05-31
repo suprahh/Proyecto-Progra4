@@ -8,7 +8,7 @@ using System.Data;
 
 namespace WebApplication2.Clases
 {
-    public static class Datos
+    public static class Buscar
     {
         public static bool AgregarUsuario(Usuario user)
         {

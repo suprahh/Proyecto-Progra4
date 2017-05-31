@@ -63,7 +63,7 @@ namespace WebApplication2.Forms
             p.Foto = "~/FotoArticulos/" + FileUploadFoto.FileName;
             FileUploadFoto.SaveAs(Server.MapPath("~/FotoArticulos/" + FileUploadFoto.FileName));
             p.IdCategoria=int.Parse(DropDownListCategoria.SelectedValue);
-            if (Datos.AgregarProducto(p))
+            if (Buscar.AgregarProducto(p))
             {
                 this.Page.Response.Write("<script language='JavaScript'>window.alert('se agrego correctamente');</script>");
             }
@@ -83,7 +83,7 @@ namespace WebApplication2.Forms
                case 1:
                     PanelProductoDataList.Visible = true;
                     PanelProductoEncontrado.Visible = false;
-                    GridViewProductosEncontrados.DataSource = Datos.BproductoNombre(TextBoxBusquedaP.Text);
+                    GridViewProductosEncontrados.DataSource = Buscar.BproductoNombre(TextBoxBusquedaP.Text);
                     GridViewProductosEncontrados.DataBind();
                     break;
                 case 2:
@@ -91,7 +91,7 @@ namespace WebApplication2.Forms
                     PanelProductoDataList.Visible = false;
                     PanelProductoEncontrado.Visible = true;
                    
-                    Producto p = Datos.BproductoId(int.Parse(TextBoxBusquedaP.Text));
+                    Producto p = Buscar.BproductoId(int.Parse(TextBoxBusquedaP.Text));
 
                     productos.Add(p);
                     DetailsViewProducto.DataSource= productos;
@@ -100,7 +100,7 @@ namespace WebApplication2.Forms
                 case 3:
                     PanelProductoDataList.Visible = true;
                     PanelProductoEncontrado.Visible = false;
-                    GridViewProductosEncontrados.DataSource = Datos.BproductoPrecio(int.Parse(TextBoxBusquedaP.Text));
+                    GridViewProductosEncontrados.DataSource = Buscar.BproductoPrecio(int.Parse(TextBoxBusquedaP.Text));
                     GridViewProductosEncontrados.DataBind();
                     break;
 
@@ -108,7 +108,7 @@ namespace WebApplication2.Forms
                     PanelProductoDataList.Visible = true;
                     PanelProductoEncontrado.Visible = false;
                     
-                    GridViewProductosEncontrados.DataSource = Datos.BproductoCategoria(DropDownListCategoriasB.SelectedValue);
+                    GridViewProductosEncontrados.DataSource = Buscar.BproductoCategoria(DropDownListCategoriasB.SelectedValue);
                     GridViewProductosEncontrados.DataBind();
                     break;
 

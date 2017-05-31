@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Conexion.cs" />
-    <Compile Include="App_Code\Datos.cs" />
+    <Compile Include="App_Code\Buscar.cs" />
     <Compile Include="App_Code\Producto.cs" />
     <Compile Include="App_Code\Usuario.cs" />
     <Compile Include="Forms\Contacto.aspx.cs">
