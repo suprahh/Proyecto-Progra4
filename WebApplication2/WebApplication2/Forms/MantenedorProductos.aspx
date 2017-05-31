@@ -64,8 +64,33 @@
                       <asp:Button ID="ButtonBuscarP" runat="server" Text="Button" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
                       <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
+                          <asp:GridView ID="GridViewProductosEncontrados" runat="server">
+
+                          </asp:GridView>
+                          <asp:DetailsView ID="DetailsViewProducto" runat="server" Height="50px" Width="125px" AutoGenerateRows="False"  >
                           
-                          <asp:DetailsView ID="DetailsViewProducto" runat="server" Height="50px" Width="125px"></asp:DetailsView>
+                             
+                         
+                          
+                             
+                              <Fields>
+                                  <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                                  <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
+                                  <asp:BoundField DataField="Precio" HeaderText="Precio" />
+                                  <asp:BoundField DataField="Stock" HeaderText="Stock" />
+                                  <asp:TemplateField HeaderText="Foto">
+                                      <ItemTemplate>
+                                          <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("Foto") %>' />
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                  <asp:BoundField DataField="IdCategoria" HeaderText="Id Categoria" />
+                              </Fields>
+                          
+                             
+                         
+                          
+                             
+                          </asp:DetailsView>
                       </asp:Panel>
 
                   </asp:Panel>

@@ -256,6 +256,15 @@ namespace WebApplication2.Forms {
         protected global::System.Web.UI.WebControls.Panel PanelProductoDataList;
         
         /// <summary>
+        /// Control GridViewProductosEncontrados.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewProductosEncontrados;
+        
+        /// <summary>
         /// Control DetailsViewProducto.
         /// </summary>
         /// <remarks>

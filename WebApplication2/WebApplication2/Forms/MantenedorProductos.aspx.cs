@@ -5,11 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication2.Clases;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WebApplication2.Forms
 {
+
     public partial class MantenedorProductos : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -67,13 +71,23 @@ namespace WebApplication2.Forms
 
         protected void ButtonBuscarP_Click(object sender, EventArgs e)
         {
+
             switch (int.Parse(DropDownListInfoProducto.SelectedValue))
             {
                case 1:
-                   
-                    LabelverNombre.Text = Datos.BproductoId(int.Parse(TextBoxBusquedaP.Text)).Nombre; ;
+                    
                     break;
+                case 2:
+                    PanelProductoDataList.Visible = true;
+                    List<Producto> productos = new List<Producto>();
+                    Producto p = Datos.BproductoId(int.Parse(TextBoxBusquedaP.Text));
 
+                    productos.Add(p);
+                    DetailsViewProducto.DataSource= productos;
+                    DetailsViewProducto.DataBind();
+                    break;
+                case 3:
+                    break;
                 
 
                 default:
