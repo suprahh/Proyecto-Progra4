@@ -54,14 +54,28 @@
                           <asp:ListItem Value="2">Codigo</asp:ListItem>
                           <asp:ListItem Value="3">Precio</asp:ListItem>
 
+                          <asp:ListItem Value="4">Categoria</asp:ListItem>
+
                       </asp:DropDownList>
 
                   </asp:Panel>
               </td>
               <td> 
                   <asp:Panel ID="BusquedaProducto" runat="server" Visible="false" CssClass="auto-style2">
-                      <asp:Label ID="LabelTipoPro" runat="server" Text="Orden a dar : "></asp:Label> <asp:TextBox ID="TextBoxBusquedaP" runat="server"></asp:TextBox> <br />
-                      <asp:Button ID="ButtonBuscarP" runat="server" Text="Button" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
+                      <asp:Label ID="LabelTipoPro" runat="server" Text="Orden a dar : "></asp:Label> <asp:TextBox ID="TextBoxBusquedaP" runat="server"></asp:TextBox> <br /> <asp:DropDownList ID="DropDownListCategoriasB" runat="server" AutoPostBack="True">
+                          <asp:ListItem Value="1">Tarjeta de video</asp:ListItem>
+                          <asp:ListItem Value="1">Placa madre</asp:ListItem>
+                          <asp:ListItem Value="3">Gabinete</asp:ListItem>
+                          <asp:ListItem Value="4">Procesador</asp:ListItem>
+                          <asp:ListItem Value="5">Memoria Ram</asp:ListItem>
+                          <asp:ListItem Value="6">Monitor</asp:ListItem>
+                          <asp:ListItem Value="7">SSD</asp:ListItem>
+                          <asp:ListItem Value="8">Fuente de poder</asp:ListItem>
+                          <asp:ListItem Value="9">Mouse</asp:ListItem>
+                          <asp:ListItem Value="10">Disco duro</asp:ListItem>
+                          <asp:ListItem Value="11">Cooler</asp:ListItem>
+                      </asp:DropDownList> <br />
+                      <asp:Button ID="ButtonBuscarP" runat="server" Text="Buscar" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
                       <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
                           <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False">

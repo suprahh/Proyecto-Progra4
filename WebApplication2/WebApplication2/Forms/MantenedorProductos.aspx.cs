@@ -31,8 +31,13 @@ namespace WebApplication2.Forms
         {
             if (DropDownListInfoProducto.SelectedValue!="nada")
             {
-            BusquedaProducto.Visible = true;
-            LabelTipoPro.Text = "buscardo por "+ DropDownListInfoProducto.SelectedValue.ToString()+" : ";
+                TextBoxBusquedaP.Visible = true;
+                BusquedaProducto.Visible = true;
+            LabelTipoPro.Text = "buscardo por "+ DropDownListInfoProducto.SelectedItem.ToString()+" : ";
+                if (DropDownListInfoProducto.SelectedValue=="4")
+                {
+                    TextBoxBusquedaP.Visible = false;
+                }
             }
             else
             {
@@ -98,7 +103,18 @@ namespace WebApplication2.Forms
                     GridViewProductosEncontrados.DataSource = Datos.BproductoPrecio(int.Parse(TextBoxBusquedaP.Text));
                     GridViewProductosEncontrados.DataBind();
                     break;
-                
+
+                case 4:
+                    PanelProductoDataList.Visible = true;
+                    PanelProductoEncontrado.Visible = false;
+                    
+                    GridViewProductosEncontrados.DataSource = Datos.BproductoCategoria(DropDownListCategoriasB.SelectedValue);
+                    GridViewProductosEncontrados.DataBind();
+                    break;
+
+
+
+
 
                 default:
                     this.Page.Response.Write("<script language='JavaScript'>window.alert('selecciona una categoria para buscar');</script>");
