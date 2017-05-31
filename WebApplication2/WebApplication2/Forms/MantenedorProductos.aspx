@@ -49,10 +49,10 @@
                   <asp:Panel ID="PanelMostrarProducto" Visible="false" runat="server">
                       <asp:Label ID="Label7" runat="server" Text="Buscar por : "></asp:Label>
                       <asp:DropDownList ID="DropDownListInfoProducto" runat="server" OnSelectedIndexChanged="DropDownListInfoProducto_SelectedIndexChanged" AutoPostBack="True">
-                          <asp:ListItem Value="nada">Selecciona una Opcion</asp:ListItem>
-                          <asp:ListItem Value="nombre">Nombre</asp:ListItem>
-                          <asp:ListItem Value="id">Codigo</asp:ListItem>
-                          <asp:ListItem Value="precio">Precio</asp:ListItem>
+                          <asp:ListItem Value="0">Selecciona una Opcion</asp:ListItem>
+                          <asp:ListItem Value="1">Nombre</asp:ListItem>
+                          <asp:ListItem Value="2">Codigo</asp:ListItem>
+                          <asp:ListItem Value="3">Precio</asp:ListItem>
 
                       </asp:DropDownList>
 
@@ -61,8 +61,10 @@
               <td> 
                   <asp:Panel ID="BusquedaProducto" runat="server" Visible="false" CssClass="auto-style2">
                       <asp:Label ID="LabelTipoPro" runat="server" Text="Orden a dar : "></asp:Label> <asp:TextBox ID="TextBoxBusquedaP" runat="server"></asp:TextBox> <br />
-                      <asp:Button ID="ButtonBuscarP" runat="server" Text="Button" Width="211px" /><br />
+                      <asp:Button ID="ButtonBuscarP" runat="server" Text="Button" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
+                      <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
+                          
                           <asp:DetailsView ID="DetailsViewProducto" runat="server" Height="50px" Width="125px"></asp:DetailsView>
                       </asp:Panel>
 

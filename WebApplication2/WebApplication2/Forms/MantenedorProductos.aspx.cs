@@ -33,6 +33,7 @@ namespace WebApplication2.Forms
             else
             {
                 BusquedaProducto.Visible = false;
+                PanelMostrarProducto.Visible = false;
             }
             
         }
@@ -62,6 +63,23 @@ namespace WebApplication2.Forms
                 this.Page.Response.Write("<script language='JavaScript'>window.alert('error al ingresar producto');</script>");
             }
 
+        }
+
+        protected void ButtonBuscarP_Click(object sender, EventArgs e)
+        {
+            switch (int.Parse(DropDownListInfoProducto.SelectedValue))
+            {
+               case 1:
+                   
+                    LabelverNombre.Text = Datos.BproductoId(int.Parse(TextBoxBusquedaP.Text)).Nombre; ;
+                    break;
+
+                
+
+                default:
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('selecciona una categoria para buscar');</script>");
+                    break;
+            }  
         }
     }
 }
