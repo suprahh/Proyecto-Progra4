@@ -76,6 +76,8 @@
     <Content Include="Forms\PrincipalAdministracion.aspx" />
     <Content Include="Forms\Productos.aspx" />
     <Content Include="Forms\QuienesSomos.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Forms\MantenedorUsuarios.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -116,6 +118,7 @@
     <Content Include="Forms\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Agregar.cs" />
     <Compile Include="App_Code\Conexion.cs" />
     <Compile Include="App_Code\Buscar.cs" />
     <Compile Include="App_Code\Producto.cs" />
@@ -161,6 +164,16 @@
     </Compile>
     <Compile Include="Forms\QuienesSomos.aspx.designer.cs">
       <DependentUpon>QuienesSomos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MantenedorUsuarios.aspx.cs">
+      <DependentUpon>MantenedorUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MantenedorUsuarios.aspx.designer.cs">
+      <DependentUpon>MantenedorUsuarios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">

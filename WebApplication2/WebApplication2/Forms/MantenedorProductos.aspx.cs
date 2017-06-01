@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebApplication2.Clases;
+using WebApplication2.App_Code;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -63,7 +63,7 @@ namespace WebApplication2.Forms
             p.Foto = "~/FotoArticulos/" + FileUploadFoto.FileName;
             FileUploadFoto.SaveAs(Server.MapPath("~/FotoArticulos/" + FileUploadFoto.FileName));
             p.IdCategoria=int.Parse(DropDownListCategoria.SelectedValue);
-            if (Buscar.AgregarProducto(p))
+            if (Agregar.AgregarProducto(p))
             {
                 this.Page.Response.Write("<script language='JavaScript'>window.alert('se agrego correctamente');</script>");
             }

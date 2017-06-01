@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication2.Clases
+namespace WebApplication2.App_Code
 {
     public class Producto
     {
