@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WebApplication2.Clases
+{
+    public class Producto
+    {
+        private string nombre;
+        private string descripcion;
+        private int  precio;
+        private int stock;
+        private string foto;
+        private int idCategoria;
+
+        public Producto ()
+        {
+
+        }
+
+        public int IdCategoria
+        {
+            get { return idCategoria; }
+            set { idCategoria = value; }
+        }
+
+        public string Foto
+        {
+            get { return foto; }
+            set { foto = value; }
+        }
+
+        public int Stock
+        {
+            get { return stock; }
+            set { stock = value; }
+        }
+
+        public int  Precio
+        {
+            get { return precio; }
+            set { precio = value; }
+        }
+
+        public string Descripcion
+        {
+            get { return descripcion; }
+            set { descripcion = value; }
+        }
+
+
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+
+        
+
+
+
+
+    }
+}
