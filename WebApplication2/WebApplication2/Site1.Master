@@ -6,23 +6,23 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Todo Tech</title>
-    <link href="css/Estilo.css" rel="stylesheet" />
+    <link href="css/StyleSheet1.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
      <form id="formContenido" runat="server">
-    <div id="divHeader">
-        <header id="header">
-            <div id="divLogo">
-              <img src="FotosEstilo/Logo.png" id="logo" /> 
-            </div>
-            <div id="slogan">
-                <h1 id="eslogan">Tu centro tecnologio</h1>
+         <div id="divHeader">
+             <header id="header">
+                 <div id="divLogo">
+                     <asp:Image ID="logo" ImageUrl="~/FotosEstilo/Logo.png" runat="server" />       
+                 </div>
+                 <div id="slogan">
+                     <h1 id="eslogan">Tu centro tecnologio</h1>
 
-            </div>
-        </header>
-    </div>
+                 </div>
+             </header>
+         </div>
     <nav>
       <div id="divMenu">
         <ul id="menu">

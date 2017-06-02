@@ -80,7 +80,9 @@
                       <asp:Button ID="ButtonBuscarP" runat="server" Text="Buscar" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
                       <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
-                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False">
+                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+
+                              <AlternatingRowStyle BackColor="PaleGoldenrod" />
 
                               <Columns>
                                   <asp:BoundField DataField="Id" HeaderText="Id Producto" />
@@ -95,6 +97,15 @@
                                   </asp:TemplateField>
                                   <asp:BoundField DataField="IdCategoria" HeaderText="Id Categoria" />
                               </Columns>
+
+                              <FooterStyle BackColor="Tan" />
+                              <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                              <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                              <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                              <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                              <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                              <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                              <SortedDescendingHeaderStyle BackColor="#C2A47B" />
 
                           </asp:GridView>
                       </asp:Panel>

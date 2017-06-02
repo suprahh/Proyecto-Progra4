@@ -70,6 +70,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Forms\Contacto.aspx" />
     <Content Include="Forms\MantenedorProductos.aspx" />
@@ -105,7 +106,6 @@
     </None>
     <Content Include="web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Site2.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -185,13 +185,6 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site2.Master.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site2.Master.designer.cs">
-      <DependentUpon>Site2.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

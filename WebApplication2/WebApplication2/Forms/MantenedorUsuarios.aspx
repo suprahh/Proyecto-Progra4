@@ -5,7 +5,7 @@
    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div id="labelregistro">
+   <div class="labelregistro">
     <div>
          <asp:Button ID="ButtonAgregar"  runat="server" Text="Agregar Usuario" OnClick="ButtonAgregar_Click" />
      </div>
@@ -42,7 +42,7 @@
         <div>
             <asp:Button ID="ButtonBuscar" runat="server" Text="Buscar Usuario" OnClick="ButtonBuscar_Click" />
         </div>
-        <div id="labelregistro">
+        <div class="labelregistro">
             <asp:Panel ID="PanelBuscarUsuario" Visible="false" runat="server">
                 <div>
                     <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonId" Text="ID :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged" runat="server" />
