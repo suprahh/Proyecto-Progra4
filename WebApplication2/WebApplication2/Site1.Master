@@ -11,6 +11,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+     <form id="formContenido" runat="server">
     <div id="divHeader">
         <header id="header">
             <div id="divLogo">
@@ -30,18 +31,20 @@
          <li class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/Contacto.aspx"   ID="HyperLinkContacto" runat="server">Contactanos</asp:HyperLink> </li>
          </ul>
         </div>
+        
         <div id="divLogin">
             <asp:ContentPlaceHolder  ID="ContentPlaceHolderCuadroLogin" runat="server">
 
             </asp:ContentPlaceHolder>
         </div>
-    </nav>
-    <form id="formLogin" runat="server">
+         
+    </nav>  
+   
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+  
     <div>
         <ul>
             <li>  <asp:HyperLink  ID="HyperLinkVideo" NavigateUrl="~/Forms/MantenedorProductos.aspx" runat="server">Tarjeta de Video</asp:HyperLink></li>
@@ -67,5 +70,6 @@
             <asp:Label ID="LabelDatos" runat="server" Text="Direccion, comuna, ciudad fono: 15211234501"></asp:Label>
         </div>
     </footer>
+ </form>
 </body>
 </html>

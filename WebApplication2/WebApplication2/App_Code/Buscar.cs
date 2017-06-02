@@ -11,6 +11,26 @@ namespace WebApplication2.App_Code
     public static class Buscar
     {
        
+        public static bool BuscarUsuario (string user, string contraseña)
+        {
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "select * from TAB_USUARIOS where USERNAME = '" + user + "' and PASSWORD = '" + contraseña + "'";
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            
+            if ( conCadena.UpdateBatchSize== 1)
+            {
+                con.Close();
+                return true;
+            }
+            else
+            {
+                con.Close();
+                return false;
+
+            }
+        }
 
         public static Producto BproductoId(int id)
         {
@@ -34,6 +54,7 @@ namespace WebApplication2.App_Code
                 p.IdCategoria = (int)row[6];
 
             }
+            con.Close();
             return p;
         }
 
@@ -61,6 +82,7 @@ namespace WebApplication2.App_Code
                 p.IdCategoria = (int)row[6];
                 productos.Add(p);
             }
+            con.Close();
             return productos;
         }
 
@@ -88,6 +110,7 @@ namespace WebApplication2.App_Code
                 p.IdCategoria = (int)row[6];
                 productos.Add(p);
             }
+            con.Close();
             return productos;
          }
         public static List<Producto> BproductoCategoria(string categoria)
@@ -114,6 +137,7 @@ namespace WebApplication2.App_Code
                 p.IdCategoria = (int)row[6];
                 productos.Add(p);
             }
+            con.Close();
             return productos;
         }
     }
