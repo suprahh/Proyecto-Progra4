@@ -26,7 +26,7 @@
             <td class="auto-style1"> <asp:Button ID="ButtonAgregarProducto" runat="server" Text="Agregar Producto" OnClick="ButtonAgregarProducto_Click" /> </td>
             <td class="auto-style3"> <asp:Button ID="ButtonBUscarProducto" runat="server" Text="Buscar Producto" OnClick="ButtonBUscarProducto_Click" /></td>
         </tr>
-          <tr>
+          <tr id="cuadroData">
               <td class="auto-style1"> <asp:Panel ID="PanelAgregarProducto" Visible="false" runat="server">
                   <asp:Label ID="Label1" runat="server" Text="Nombre : "></asp:Label>
                   <asp:TextBox ID="TextBoxNombreProducto" runat="server"></asp:TextBox><br />

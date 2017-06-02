@@ -7,7 +7,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <asp:Panel ID="PanelLogin" runat="server">
 
-    <div>
+
+    <div id="puser">
+        <div>
         <asp:Label ID="Label1" runat="server" Text="Usuario :"></asp:Label>
         <asp:TextBox ID="TextBoxUsuario" runat="server"></asp:TextBox> 
     </div>
@@ -24,4 +26,7 @@
         <asp:Button ID="ButtonLogout" runat="server" Text="Cerrar Session" OnClick="ButtonLogout_Click" />
         
     </asp:Panel>
+
+    </div>
+    
 </asp:Content>
