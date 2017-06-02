@@ -16,10 +16,11 @@ namespace WebApplication2.App_Code
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "select * from TAB_USUARIOS where USERNAME = '" + user + "' and PASSWORD = '" + contraseña + "'";
-            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
-            
-            if ( conCadena.UpdateBatchSize== 1)
+            string consulta = "select count(*) from TAB_USUARIOS where USERNAME = '" + user + "' and PASSWORD = '" + contraseña + "'";
+            SqlCommand conCadena = new SqlCommand(consulta, con);
+
+         
+            if (Convert.ToInt16(conCadena.ExecuteScalar())== 1)
             {
                 con.Close();
                 return true;

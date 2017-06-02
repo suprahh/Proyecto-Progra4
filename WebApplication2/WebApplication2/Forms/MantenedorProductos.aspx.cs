@@ -16,25 +16,25 @@ namespace WebApplication2.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void ButtonAgregarProducto_Click(object sender, EventArgs e)
         {
             PanelAgregarProducto.Visible = true;
             PanelMostrarProducto.Visible = false;
-           
-            
+
+
         }
 
         protected void DropDownListInfoProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (DropDownListInfoProducto.SelectedValue!="nada")
+            if (DropDownListInfoProducto.SelectedValue != "nada")
             {
                 TextBoxBusquedaP.Visible = true;
                 BusquedaProducto.Visible = true;
-            LabelTipoPro.Text = "buscardo por "+ DropDownListInfoProducto.SelectedItem.ToString()+" : ";
-                if (DropDownListInfoProducto.SelectedValue=="4")
+                LabelTipoPro.Text = "buscardo por " + DropDownListInfoProducto.SelectedItem.ToString() + " : ";
+                if (DropDownListInfoProducto.SelectedValue == "4")
                 {
                     TextBoxBusquedaP.Visible = false;
                 }
@@ -44,7 +44,7 @@ namespace WebApplication2.Forms
                 BusquedaProducto.Visible = false;
                 PanelMostrarProducto.Visible = false;
             }
-            
+
         }
 
         protected void ButtonBUscarProducto_Click(object sender, EventArgs e)
@@ -56,13 +56,13 @@ namespace WebApplication2.Forms
         protected void ButtonInsertProducto_Click(object sender, EventArgs e)
         {
             Producto p = new Producto();
-            p.Nombre=TextBoxNombreProducto.Text;
+            p.Nombre = TextBoxNombreProducto.Text;
             p.Descripcion = TextBoxDescripcion.Text;
             p.Precio = int.Parse(TextBoxPrecio.Text);
             p.Stock = int.Parse(TextBoxStock.Text);
             p.Foto = "~/FotoArticulos/" + FileUploadFoto.FileName;
             FileUploadFoto.SaveAs(Server.MapPath("~/FotoArticulos/" + FileUploadFoto.FileName));
-            p.IdCategoria=int.Parse(DropDownListCategoria.SelectedValue);
+            p.IdCategoria = int.Parse(DropDownListCategoria.SelectedValue);
             if (Agregar.AgregarProducto(p))
             {
                 this.Page.Response.Write("<script language='JavaScript'>window.alert('se agrego correctamente');</script>");
@@ -79,8 +79,8 @@ namespace WebApplication2.Forms
             List<Producto> productos = new List<Producto>();
             switch (int.Parse(DropDownListInfoProducto.SelectedValue))
             {
-             
-               case 1:
+
+                case 1:
                     PanelProductoDataList.Visible = true;
                     PanelProductoEncontrado.Visible = false;
                     GridViewProductosEncontrados.DataSource = Buscar.BproductoNombre(TextBoxBusquedaP.Text);
@@ -90,11 +90,11 @@ namespace WebApplication2.Forms
 
                     PanelProductoDataList.Visible = false;
                     PanelProductoEncontrado.Visible = true;
-                   
+
                     Producto p = Buscar.BproductoId(int.Parse(TextBoxBusquedaP.Text));
 
                     productos.Add(p);
-                    DetailsViewProducto.DataSource= productos;
+                    DetailsViewProducto.DataSource = productos;
                     DetailsViewProducto.DataBind();
                     break;
                 case 3:
@@ -107,9 +107,11 @@ namespace WebApplication2.Forms
                 case 4:
                     PanelProductoDataList.Visible = true;
                     PanelProductoEncontrado.Visible = false;
-                    
+
                     GridViewProductosEncontrados.DataSource = Buscar.BproductoCategoria(DropDownListCategoriasB.SelectedValue);
                     GridViewProductosEncontrados.DataBind();
+
+
                     break;
 
 
@@ -119,7 +121,9 @@ namespace WebApplication2.Forms
                 default:
                     this.Page.Response.Write("<script language='JavaScript'>window.alert('selecciona una categoria para buscar');</script>");
                     break;
-            }  
-        }
+            }
+        } 
+
+       
     }
 }

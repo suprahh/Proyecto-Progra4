@@ -14,7 +14,9 @@
         .auto-style4 {
             width: 241px;
         }
+        
     </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderCuadroLogin" runat="server">
 </asp:Content>
@@ -29,7 +31,7 @@
                   <asp:Label ID="Label1" runat="server" Text="Nombre : "></asp:Label>
                   <asp:TextBox ID="TextBoxNombreProducto" runat="server"></asp:TextBox><br />
                   <asp:Label ID="Label2" runat="server" Text="Descripcion : "></asp:Label>
-                  <asp:TextBox ID="TextBoxDescripcion" runat="server" Height="50px" TextMode="MultiLine" Width="175px"></asp:TextBox><br />
+                  <asp:TextBox ID="TextBoxDescripcion" runat="server" Height="69px" TextMode="MultiLine" Width="328px"></asp:TextBox><br />
                   <asp:Label ID="Label3" runat="server" Text="Precio : "></asp:Label>
                   <asp:TextBox ID="TextBoxPrecio" runat="server"></asp:TextBox><br />
                   <asp:Label ID="Label4" runat="server" Text="Stock : "></asp:Label>
@@ -109,6 +111,11 @@
                                       </ItemTemplate>
                                   </asp:TemplateField>
                                   <asp:BoundField DataField="IdCategoria" HeaderText="Id Categoria" />
+                                  <asp:TemplateField HeaderText="cantidad">
+                                      <ItemTemplate>
+                                          <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
                               </Fields>
                                </asp:DetailsView>
                           </asp:Panel>

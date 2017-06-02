@@ -17,6 +17,7 @@ namespace WebApplication2
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Session["carrito"] = "";
             Session["user"] = "";
         }
 
