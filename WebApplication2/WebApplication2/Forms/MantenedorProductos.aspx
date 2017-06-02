@@ -6,6 +6,7 @@
         }
         .auto-style2 {
             margin-left: 0px;
+            margin-bottom: 0px;
         }
         .auto-style3 {
             width: 241px;
@@ -80,11 +81,12 @@
                       <asp:Button ID="ButtonBuscarP" runat="server" Text="Buscar" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
                       <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
-                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" OnRowEditing="EdiatarProducto" OnRowUpdated="DatoEditado" OnRowUpdating="ModificarProducto">
 
                               <AlternatingRowStyle BackColor="PaleGoldenrod" />
 
                               <Columns>
+                                  <asp:CommandField ButtonType="Link" EditText="modificar" ShowEditButton="true"  />
                                   <asp:BoundField DataField="Id" HeaderText="Id Producto" />
                                   <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
                                   <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
@@ -132,5 +134,14 @@
                           </asp:Panel>
                  </asp:Panel>
               </td>
+              </tr>
+        <%-- <tr>
+             <td> 
+                 <asp:Button ID="ButtonModificar" runat="server" Text="Modificar Producto" />
+                 <asp:Panel ID="PanelModificarProducto" Visible="false" runat="server">
+
+                 </asp:Panel>
+             </td>
+         </tr>--%>
               </table>
 </asp:Content>

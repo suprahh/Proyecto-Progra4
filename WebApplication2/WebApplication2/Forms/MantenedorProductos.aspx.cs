@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WebApplication2.App_Code;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace WebApplication2.Forms
 {
@@ -16,7 +17,7 @@ namespace WebApplication2.Forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void ButtonAgregarProducto_Click(object sender, EventArgs e)
@@ -76,6 +77,18 @@ namespace WebApplication2.Forms
 
         protected void ButtonBuscarP_Click(object sender, EventArgs e)
         {
+            buscarProductos();
+        }
+
+        protected void EdiatarProducto(object sender, GridViewEditEventArgs e)
+        {
+            GridViewProductosEncontrados.EditIndex = e.NewEditIndex;
+            buscarProductos();
+
+        }
+
+        public void buscarProductos ()
+        {
             List<Producto> productos = new List<Producto>();
             switch (int.Parse(DropDownListInfoProducto.SelectedValue))
             {
@@ -122,8 +135,43 @@ namespace WebApplication2.Forms
                     this.Page.Response.Write("<script language='JavaScript'>window.alert('selecciona una categoria para buscar');</script>");
                     break;
             }
-        } 
+        }
 
-       
+        protected void DatoEditado(object sender, GridViewUpdatedEventArgs e)
+        {
+            var lista = e.NewValues;
+
+        }
+
+        protected void ModificarProducto(object sender, GridViewUpdateEventArgs e)
+        {
+            Producto p = new Producto();
+            var lista = e.NewValues;
+            var id = e.NewValues[0];
+            foreach (DictionaryEntry entry in e.NewValues)
+            {
+
+
+                p.Id = Convert.ToInt16( e.NewValues[0]);
+                p.Nombre =Convert.ToString( e.NewValues[1]);
+                p.Descripcion = Convert.ToString( e.NewValues[2]);
+                p.Precio = Convert.ToInt32( e.NewValues[3]);
+                p.Stock = Convert.ToInt32( e.NewValues[4]);
+                p.Foto =Convert.ToString( e.NewValues[5]);
+                if (Modificar.modificarProducto(p) == true)
+                {
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('se modificio con exito');</script>");
+                    return;
+                }
+                else
+                {
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('no se modificio producto');</script>");
+                    Response.Redirect("~/Forms/MantenedorProductos.aspx");
+                }
+
+            }
+            
+           
+        }
     }
 }
