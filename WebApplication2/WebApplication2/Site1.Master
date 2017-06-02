@@ -45,7 +45,7 @@
             </asp:ContentPlaceHolder>
         </div>
   
-    <div>
+    <div id="categoria">
         <ul>
             <li>  <asp:HyperLink  ID="HyperLinkVideo" NavigateUrl="~/Forms/MantenedorProductos.aspx" runat="server">Tarjeta de Video</asp:HyperLink></li>
              <li>  <asp:HyperLink  ID="HyperLinkPlaca" NavigateUrl="~/WebForm1.aspx" runat="server">Placa Madre</asp:HyperLink></li>
@@ -62,7 +62,7 @@
              
         </ul>
     </div>
-    <footer>
+    <footer id="footer">
         <div>
             <h2>mostrar variable de session</h2>
         </div>

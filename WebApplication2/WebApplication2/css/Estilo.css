@@ -1,5 +1,5 @@
 ﻿body {
-    background-image : url(../FotosEstilo/Fono.jpg);
+    background-image : url(../FotosEstilo/liquid.jpg);
 }
 header
 {
@@ -21,7 +21,7 @@ header
 #slogan{
     display:flex;
     justify-content:center;
-    align-items: center;
+    color: white;
   
 }
 nav{
@@ -30,10 +30,12 @@ nav{
 }
 #divMenu{
     width: 600px;
+    text-align:center;
 }
 #menu{
     list-style:none;
-   float:left;
+    float:left;
+    text-align:center;
 }
 
 .liMenu {
@@ -41,6 +43,8 @@ nav{
     border: 2px solid #186BF2;
     border-radius: 10px 10px;
     background-color: #4689F4;
+    display:inline-block;
+    
 }
 .navegador {
     color: antiquewhite;
@@ -50,4 +54,25 @@ nav{
 
 #divLogin{
     width:600px;
+}
+
+#div{
+    color:white;
+    float:left;
+}
+
+#footer{
+    color:white;
+}
+
+#labelregistro{
+    color:white;
+}
+
+#cuadroData{
+    color:white;
+}
+
+#puser{
+    color:white;
 }
