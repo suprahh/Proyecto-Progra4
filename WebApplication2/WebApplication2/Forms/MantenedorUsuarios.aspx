@@ -57,7 +57,7 @@
             </asp:Panel>
         </div>
         <div>
-            <asp:DetailsView ID="DetailsViewUsuario" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" DefaultMode="Edit" OnItemUpdated="ModificarUsuario" OnItemUpdating="ModificaUsario" OnModeChanged="EditarUsuario">
+            <asp:DetailsView ID="DetailsViewUsuario" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" DefaultMode="Edit" OnItemUpdated="ModificarUsuario" OnItemUpdating="ModificaUsario" OnModeChanged="EditarUsuario" OnModeChanging="Cancelar">
                 <AlternatingRowStyle BackColor="#F7F7F7" />
                 <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
                 <Fields>

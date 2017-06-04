@@ -99,5 +99,10 @@ namespace WebApplication2
 
             }
         }
+
+        protected void Cancelar(object sender, DetailsViewModeEventArgs e)
+        {
+            Response.Redirect("~/Forms/MantenedorUsuarios.aspx");
+        }
     }
 }

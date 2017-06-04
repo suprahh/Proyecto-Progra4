@@ -15,8 +15,17 @@ namespace WebApplication2.Forms
         private static int contador = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
+            if (Session["user"]!=null)
+            {
+                
+                Usuario user = (Usuario)Session["user"];
+                LabelBienvenido.Text = "Bienvenido " + user.Username + " ";
+                PanelBienvenida.Visible = true;
+                PanelLogin.Visible = false;
+            }
           
+
         }
 
         protected void ButtonIngresar_Click(object sender, EventArgs e)
@@ -35,8 +44,9 @@ namespace WebApplication2.Forms
            
             if (Buscar.BuscarUsuario(user, contraseña)==true   )
             {
+             Usuario usuario =  Buscar.BuscarUsuarioUser(user);
                 contador = 0;
-                Session["user"] = user;
+                Session["user"] = usuario;
                 PanelBienvenida.Visible = true;
                 PanelLogin.Visible = false;
 
