@@ -87,7 +87,7 @@
 
                               <Columns>
                                   <asp:CommandField ButtonType="Link" EditText="modificar" ShowEditButton="true"  />
-                                  <asp:TemplateField HeaderText="ID p">
+                                  <asp:TemplateField HeaderText="ID Producto">
                                       <ItemTemplate>
                                           <asp:Label ID="LabelIdProductoEncontrados" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
                                       </ItemTemplate>

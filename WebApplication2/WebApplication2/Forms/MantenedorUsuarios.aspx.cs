@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,11 +14,9 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBoxIdb.Visible = false;
-            TextBoxRutb.Visible = false;
-            TextBoxNombreb.Visible = false;
-            TextBoxEmailb.Visible = false;
-            TextBoxUserb.Visible = false;
+           
+            
+          
         }
 
         protected void ButtonAgregarUsuario_Click(object sender, EventArgs e)
@@ -43,57 +42,62 @@ namespace WebApplication2
             PanelAgregarusuario.Visible = false;
         }
 
-        protected void ButtonBuscarUsuario_Click(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        protected void RadioButtonId_CheckedChanged(object sender, EventArgs e)
-        {
-
-            List<bool> eleccion = new List<bool>();
-            eleccion.Add(RadioButtonId.Checked);
-            eleccion.Add(RadioButtonRut.Checked);
-            eleccion.Add(RadioButtonNombre.Checked);
-            eleccion.Add(RadioButtonEmail.Checked);
-            eleccion.Add(RadioButtonUser.Checked);
-            int puntero = 0;
-
-            foreach (var radioSelect in eleccion)
-            {
-                if (radioSelect == true)
-                {
-                    break;
-                }
-                puntero++;
-            }
-
-            switch (puntero)
-            {
-                case 0:
-                    TextBoxIdb.Visible = true;
-                    break;
-                case 1:
-                    TextBoxRutb.Visible = true;
-                    break;
-                case 2:
-                    TextBoxNombreb.Visible = true;
-                    break;
-                case 3:
-                    TextBoxEmailb.Visible = true;
-                    break;
-                case 4:
-                    TextBoxUserb.Visible = true;
-                    break;
-                default:
-                    break;
-            }
-        }
+       
 
         protected void ButtonAgregar_Click(object sender, EventArgs e)
         {
             PanelAgregarusuario.Visible = true;
             PanelBuscarUsuario.Visible = false;
+        }
+
+        protected void ButtonBuscarUsuario_Click1(object sender, EventArgs e)
+        {
+         Usuario user =    Buscar.BuscarUsuarioRut(Convert.ToInt32(TextBoxRutb.Text));
+            List<Usuario> listaUser = new List<Usuario>();
+            listaUser.Add(user);
+            DetailsViewUsuario.DataSource = listaUser;
+            DetailsViewUsuario.DataBind();
+
+        }
+
+        protected void EditarUsuario(object sender, EventArgs e)
+        {
+           
+          
+            
+        }
+
+        protected void ModificarUsuario(object sender, DetailsViewUpdatedEventArgs e)
+        {
+           
+        }
+
+        protected void ModificaUsario(object sender, DetailsViewUpdateEventArgs e)
+        {
+            Usuario user = new Usuario();
+            foreach (DictionaryEntry entry in e.NewValues)
+            {
+
+
+                user.Rut = Convert.ToInt32(e.NewValues[0]);
+                user.Nombre = Convert.ToString(e.NewValues[1]);
+                user.Mail = Convert.ToString(e.NewValues[2]);
+                user.Username = Convert.ToString(e.NewValues[3]);
+                user.Privilegio = Convert.ToBoolean(e.NewValues[4]);
+                if (Modificar.modificarUsuario(user) == true)
+                {
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('se modificio con exito');</script>");
+                    return;
+                }
+                else
+                {
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('no se modificio el  usuario');</script>");
+                    Response.Redirect("~/Forms/MantenedorUsuarios.aspx");
+                }
+
+            }
         }
     }
 }

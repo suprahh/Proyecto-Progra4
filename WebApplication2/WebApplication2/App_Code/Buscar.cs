@@ -141,5 +141,33 @@ namespace WebApplication2.App_Code
             con.Close();
             return productos;
         }
+
+         public static Usuario BuscarUsuarioRut (int rut)
+        {
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "select * from TAB_USUARIOS where RUT =" + rut;
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            DataTable tabla = new DataTable();
+            conCadena.Fill(tabla);
+
+            Usuario user = new Usuario();
+            foreach (DataRow row in tabla.Rows)
+            {
+
+                user.Rut= (int)row[1];
+                user.Nombre = (string)row[2];
+                user.Mail = (string)row[3];
+                user.Username = (string)row[4];
+                user.Password = (string)row[5];
+                user.Privilegio = (bool)row[6];
+
+            }
+            con.Close();
+            return user;
+        }
+
+
     }
 }

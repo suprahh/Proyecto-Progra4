@@ -30,12 +30,35 @@ namespace WebApplication2.App_Code
             }
 
         }
+        public static bool modificarUsuario(Usuario user)
+        {
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            string consulta;
+            int privilegio = user.Privilegio == true ? 1 : 0;
+            consulta = " UPDATE TAB_USUARIOS SET NOMBRE_USER ='" + user.Nombre + "', EMAIL_USER ='" + user.Mail + "', USERNAME='" + user.Username + "', TIPO_USER ="+privilegio+" WHERE RUT=+" + user.Rut;
+            con.Open();
+            SqlCommand conCadena = new SqlCommand(consulta, con);
+            if (conCadena.ExecuteNonQuery() == 1)
+            {
+                con.Close();
+                return true;
+            }
+            else
+            {
+                con.Close();
+                return false;
 
-      
-           
-        
-        
-        
+            }
+
+        }
+
+
+
+
+
+
+
 
 
     }
