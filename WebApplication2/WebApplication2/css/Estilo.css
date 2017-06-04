@@ -13,7 +13,7 @@ header
 {
    display:flex;
    justify-content:center;
-
+   background-image : url(../FotosEstilo/Logo.jpg);
 }
 #logo{
     width:200px;
