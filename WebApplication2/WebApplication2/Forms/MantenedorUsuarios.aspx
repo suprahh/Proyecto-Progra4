@@ -5,7 +5,7 @@
    
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div id="labelregistro">
+    <div class="labelregistro">
     <div>
          <asp:Button ID="ButtonAgregar"  runat="server" Text="Agregar Usuario" OnClick="ButtonAgregar_Click" />
      </div>
@@ -42,32 +42,41 @@
         <div>
             <asp:Button ID="ButtonBuscar" runat="server" Text="Buscar Usuario" OnClick="ButtonBuscar_Click" />
         </div>
-        <div id="labelregistro">
+        <div class="labelregistro">
             <asp:Panel ID="PanelBuscarUsuario" Visible="false" runat="server">
+               
+                 <div>
+                     <asp:Label ID="Label6" runat="server" Text="Ingrese RUT a buscar : "></asp:Label>
+                     <asp:TextBox ID="TextBoxRutb"  runat="server"></asp:TextBox>
+
+                </div>
+                
                 <div>
-                    <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonId" Text="ID :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged" runat="server" />
-                    <asp:TextBox ID="TextBoxIdb" Visible="false" runat="server"></asp:TextBox>
-                </div>
-                 <div>
-                    <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonRut" Text="Rut :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged"  runat="server" />
-                    <asp:TextBox ID="TextBoxRutb" Visible="false" runat="server"></asp:TextBox>
-                </div>
-                 <div>
-                    <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonNombre" Text="Nombre :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged" runat="server" />
-                    <asp:TextBox ID="TextBoxNombreb" Visible="false" runat="server"></asp:TextBox>
-                </div>
-                 <div>
-                    <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonEmail" Text="Email :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged" runat="server" />
-                    <asp:TextBox ID="TextBoxEmailb" Visible="false" runat="server"></asp:TextBox>
-                </div>
-                 <div>
-                    <asp:RadioButton GroupName="BuscarUsuario" ID="RadioButtonUser" Text="User :" AutoPostBack="true" OnCheckedChanged="RadioButtonId_CheckedChanged" runat="server" />
-                    <asp:TextBox ID="TextBoxUserb" Visible="false" runat="server"></asp:TextBox>
-                </div>
-                <div>
-                    <asp:Button ID="ButtonBuscarUsuario" runat="server" Text="Button" />
+                    <asp:Button ID="ButtonBuscarUsuario" runat="server" Text="Buscar" OnClick="ButtonBuscarUsuario_Click1" />
                 </div>
             </asp:Panel>
+        </div>
+        <div>
+            <asp:DetailsView ID="DetailsViewUsuario" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" DefaultMode="Edit" OnItemUpdated="ModificarUsuario" OnItemUpdating="ModificaUsario" OnModeChanged="EditarUsuario" OnModeChanging="Cancelar">
+                <AlternatingRowStyle BackColor="#F7F7F7" />
+                <EditRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <Fields>
+                    <asp:TemplateField HeaderText="Rut">
+                        <ItemTemplate>
+                            <asp:Label ID="Label7" runat="server" Text='<%# Bind("Rut") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
+                    <asp:BoundField HeaderText="Email" DataField="Mail" />
+                    <asp:BoundField HeaderText="Nombre de Usuario" DataField="Username" />
+                    <asp:CheckBoxField HeaderText="Privilegio" DataField="Privilegio" />
+                    <asp:CommandField ButtonType="Link" EditText="modificar" ShowEditButton="true"  />
+                </Fields>
+                <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+            </asp:DetailsView>
         </div>
     </div>
 </asp:Content>

@@ -6,6 +6,7 @@
         }
         .auto-style2 {
             margin-left: 0px;
+            margin-bottom: 0px;
         }
         .auto-style3 {
             width: 241px;
@@ -80,10 +81,17 @@
                       <asp:Button ID="ButtonBuscarP" runat="server" Text="Buscar" Width="211px" OnClick="ButtonBuscarP_Click" /><br />
                       <asp:Label ID="LabelverNombre" runat="server" Text="aqui vemos si busco el producto"></asp:Label> <br />
                       <asp:Panel ID="PanelProductoDataList" Visible="false" runat="server">
-                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False">
+                          <asp:GridView ID="GridViewProductosEncontrados" runat="server" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None" OnRowEditing="EdiatarProducto" OnRowUpdated="DatoEditado" OnRowUpdating="ModificarProducto" >
+
+                              <AlternatingRowStyle BackColor="PaleGoldenrod" />
 
                               <Columns>
-                                  <asp:BoundField DataField="Id" HeaderText="Id Producto" />
+                                  <asp:CommandField ButtonType="Link" EditText="modificar" ShowEditButton="true"  />
+                                  <asp:TemplateField HeaderText="ID Producto">
+                                      <ItemTemplate>
+                                          <asp:Label ID="LabelIdProductoEncontrados" runat="server" Text='<%# Bind("Id") %>'></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
                                   <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
                                   <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                                   <asp:BoundField DataField="Precio" HeaderText="Precio" />
@@ -93,8 +101,23 @@
                                           <asp:Image ID="Image2" runat="server" ImageUrl='<%# Bind("Foto") %>' />
                                       </ItemTemplate>
                                   </asp:TemplateField>
-                                  <asp:BoundField DataField="IdCategoria" HeaderText="Id Categoria" />
+                                 
+                                  <asp:TemplateField HeaderText="Categoria">
+                                      <ItemTemplate>
+                                          <asp:Label ID="Label8" runat="server" Text='<%# Bind("IdCategoria") %>'></asp:Label>
+                                      </ItemTemplate>
+                                  </asp:TemplateField>
+                                 
                               </Columns>
+
+                              <FooterStyle BackColor="Tan" />
+                              <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                              <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                              <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                              <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                              <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                              <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                              <SortedDescendingHeaderStyle BackColor="#C2A47B" />
 
                           </asp:GridView>
                       </asp:Panel>
@@ -121,5 +144,7 @@
                           </asp:Panel>
                  </asp:Panel>
               </td>
+              </tr>
+       
               </table>
 </asp:Content>

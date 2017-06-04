@@ -23,6 +23,7 @@
     <div>
         <asp:Button ID="ButtonIngresar" runat="server" Text="Ingresar" OnClick="ButtonIngresar_Click" />
     </div>
+  </div> 
     </asp:Panel>
     <asp:Panel ID="PanelBienvenida" Visible="false"  runat="server">
         <asp:Label ID="LabelBienvenido" runat="server" Text=""></asp:Label>
@@ -30,6 +31,6 @@
         
     </asp:Panel>
 
-    </div>
+   
     
 </asp:Content>

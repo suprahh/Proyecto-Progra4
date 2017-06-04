@@ -148,31 +148,13 @@ namespace WebApplication2 {
         protected global::System.Web.UI.WebControls.Panel PanelBuscarUsuario;
         
         /// <summary>
-        /// Control RadioButtonId.
+        /// Control Label6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonId;
-        
-        /// <summary>
-        /// Control TextBoxIdb.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxIdb;
-        
-        /// <summary>
-        /// Control RadioButtonRut.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonRut;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// Control TextBoxRutb.
@@ -184,60 +166,6 @@ namespace WebApplication2 {
         protected global::System.Web.UI.WebControls.TextBox TextBoxRutb;
         
         /// <summary>
-        /// Control RadioButtonNombre.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonNombre;
-        
-        /// <summary>
-        /// Control TextBoxNombreb.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxNombreb;
-        
-        /// <summary>
-        /// Control RadioButtonEmail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonEmail;
-        
-        /// <summary>
-        /// Control TextBoxEmailb.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxEmailb;
-        
-        /// <summary>
-        /// Control RadioButtonUser.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButtonUser;
-        
-        /// <summary>
-        /// Control TextBoxUserb.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxUserb;
-        
-        /// <summary>
         /// Control ButtonBuscarUsuario.
         /// </summary>
         /// <remarks>
@@ -245,5 +173,14 @@ namespace WebApplication2 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonBuscarUsuario;
+        
+        /// <summary>
+        /// Control DetailsViewUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView DetailsViewUsuario;
     }
 }
