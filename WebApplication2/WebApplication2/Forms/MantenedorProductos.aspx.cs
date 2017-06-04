@@ -139,7 +139,7 @@ namespace WebApplication2.Forms
 
         protected void DatoEditado(object sender, GridViewUpdatedEventArgs e)
         {
-            var lista = e.NewValues;
+       
 
         }
 
@@ -173,5 +173,7 @@ namespace WebApplication2.Forms
             
            
         }
+
+      
     }
 }
