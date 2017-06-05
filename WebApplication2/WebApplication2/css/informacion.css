@@ -1,0 +1,24 @@
+﻿#informacion{
+	background: #333;
+	color: #fff;
+	text-align: center;
+	padding: 20px;
+}
+
+#informacion .contenedor{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.info-nav{
+	margin: 20px;
+}
+
+.info-nav img{
+	cursor: pointer;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border: 7px solid #fff;
+}

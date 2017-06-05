@@ -1,0 +1,20 @@
+﻿#noticias .contenedor{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; 
+}
+
+#noticias article{
+	margin: 15px;
+
+}
+
+#noticias img{
+	border-radius: 20px 20px 20px 20px;
+	width: 100%;
+	max-width: 280px;1
+}
+
+#noticias h3, h4{
+	text-align: center;
+}

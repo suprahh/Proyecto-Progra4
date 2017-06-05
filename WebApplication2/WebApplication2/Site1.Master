@@ -1,0 +1,116 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Todo Tech</title>
+    <link href="css/estilo.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<header>
+      <div class="contenedor">
+        <h1 class="icon-laptop">PC FaStory</h1>
+        <input type="checkbox" id="menu-bar">
+        <label class="icon-menu" for="menu-bar"></label>
+
+        
+      </div>
+    </header>
+
+      <main>
+        <section id="banner">
+          <img src="img/liquid.jpg">
+          <div class="contenedor">
+            <h2>La Fabrica Preferida Por Los GAMERS</h2>
+            <p></p>
+          </div>
+          
+        </section>
+
+        <section id="bienvenidos">
+          <h2>BIENVENIDOS A NUESTRO MUNDO TECNOLOGICO</h2>
+          <p></p>
+        </section>
+          
+        <section id="noticias">
+          <h3>Las ultimas noticias y novedades tecnologicas</h3>
+          <div class="contenedor">
+            <nav class="menu">
+          <a class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/QuienesSomos.aspx" ID="HyperLinkQuienes" runat="server">¿Quienes Somos?</asp:HyperLink> </a>
+          <a class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/Productos.aspx" ID="HyperLinkProductos" runat="server">Productos</asp:HyperLink> </a>
+          <a class="liMenu"> <asp:HyperLink CssClass="navegador" NavigateUrl="~/Forms/Contacto.aspx"   ID="HyperLinkContacto" runat="server">Contactanos</asp:HyperLink> </a>
+               
+
+        </nav>
+         </div>
+        </section>
+          
+          </div>
+   
+        
+        <div id="divLogin">
+            <asp:ContentPlaceHolder  ID="ContentPlaceHolderCuadroLogin" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </nav>
+    <form id="formLogin" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div>
+        <section id="informacion">
+        
+        <div>
+          <ul>
+            <p>  <asp:HyperLink ID="HyperLinkVideo" NavigateUrl="~/Forms/MantenedorProductos.aspx" runat="server">Tarjeta de Video</asp:HyperLink></p>
+            <p>  <asp:HyperLink  ID="HyperLinkPlaca" NavigateUrl="~/WebForm1.aspx" runat="server">Placa Madre</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkGabinetes" NavigateUrl="~/WebForm1.aspx" runat="server">Gabinetes</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkProcesador" NavigateUrl="~/WebForm1.aspx" runat="server">Procesador</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkRam" NavigateUrl="~/WebForm1.aspx" runat="server">Memoria RAM</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkMonitores" NavigateUrl="~/WebForm1.aspx" runat="server">Monitores</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkSSD" NavigateUrl="~/WebForm1.aspx" runat="server">Unidad de estado Solido (SSD)</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkFuente" NavigateUrl="~/WebForm1.aspx" runat="server">Fuente de poder</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkMouse" NavigateUrl="~/WebForm1.aspx" runat="server">Mouse</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkDisco" NavigateUrl="~/WebForm1.aspx" runat="server">Disco duro</asp:HyperLink></p>
+            <p>  <asp:HyperLink ID="HyperLinkCooler" NavigateUrl="~/WebForm1.aspx" runat="server">Cooler</asp:HyperLink></p>
+          </ul>
+        </div>
+      
+      
+          <h3>Registrate En Nuestro Sitio!!!</h3>
+          <div class="contenedor">
+            <div class="info-nav">
+              <a href="navchrome.html">
+                <img  src="img/registro.png">
+              </a>
+              
+              <h4>Registro de Clientes</h4>
+            
+        </section>
+      </main>
+    </div>
+    <footer>
+        <div>
+            <h2>mostrar variable de session</h2>
+        </div>
+        <div class="contenedor">
+          <p class="copy">CuatroKa &copy; 2017</p>
+        <p class="copy"> La Rosarida, Moll Plaza Despacio</p>
+          <div class="sociales">
+            <a class="icon-facebook-squared" href="https://www.facebook.com"></a>
+          <a class="icon-instagram" href="https://www.instagram.com/"></a>
+          <a class="icon-twitter-rect" href="https://twitter.com/?lang=es"></a>
+          
+          </div>
+        </div>
+    </footer>
+</body>
+</html>
