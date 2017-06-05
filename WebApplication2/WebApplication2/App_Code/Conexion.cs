@@ -11,6 +11,7 @@ namespace WebApplication2.App_Code
         {
             string cadena = "Data Source=DESKTOP-3DJ3N69\\DBCARLOS;Initial Catalog=Pcfastory;Integrated Security=True";
             return cadena;
+           
         }
 
     }
