@@ -124,6 +124,8 @@
     <Compile Include="App_Code\Agregar.cs" />
     <Compile Include="App_Code\Conexion.cs" />
     <Compile Include="App_Code\Buscar.cs" />
+    <Content Include="App_Code\Conexion2.cs" />
+    <Content Include="App_Code\Eliminar.cs" />
     <Compile Include="App_Code\Producto.cs" />
     <Compile Include="App_Code\Usuario.cs" />
     <Compile Include="Forms\Contacto.aspx.cs">
