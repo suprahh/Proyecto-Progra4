@@ -23,8 +23,8 @@ namespace WebApplication2.Forms
             }
             if (Session["carrito"]!=null)
             {
-                List<Productos> carrito = new List<Productos>();
-              carrito = (List<Productos>)Session["carrito"];
+                List<Producto> carrito = new List<Producto>();
+              carrito = (List<Producto>)Session["carrito"];
                 GridViewCarrito.DataSource = carrito;
                 GridViewCarrito.DataBind();
             }

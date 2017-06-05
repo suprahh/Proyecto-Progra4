@@ -73,7 +73,7 @@ namespace WebApplication2.App_Code
             Producto p = new Producto();
             foreach (DataRow row in tabla.Rows)
             {
-               
+                p.Id = (int)row[0];
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
                 p.Precio = (int)row[3];
