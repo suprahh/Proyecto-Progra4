@@ -10,7 +10,7 @@
 namespace WebApplication2.Forms {
     
     
-    public partial class Compra {
+    public partial class Boleta {
         
         /// <summary>
         /// Control LabelBienvenida.
@@ -31,30 +31,12 @@ namespace WebApplication2.Forms {
         protected global::System.Web.UI.WebControls.Button ButtonLogout;
         
         /// <summary>
-        /// Control GridViewCarrito.
+        /// Control TextBoxBoleta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewCarrito;
-        
-        /// <summary>
-        /// Control LabelTotal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTotal;
-        
-        /// <summary>
-        /// Control ButtonPagar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPagar;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxBoleta;
     }
 }

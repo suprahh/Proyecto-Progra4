@@ -35,4 +35,6 @@
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
+    <asp:Label ID="LabelTotal" BackColor="#0066ff" ForeColor="White" runat="server" Text="Total a pagar : "></asp:Label>
+    <asp:Button ID="ButtonPagar"  runat="server" Text="Pagar" OnClick="ButtonPagar_Click" />
 </asp:Content>

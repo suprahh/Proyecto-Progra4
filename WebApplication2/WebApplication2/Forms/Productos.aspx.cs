@@ -109,7 +109,7 @@ namespace WebApplication2.Forms
                     carrito.Add(p);
                     Session["carrito"] = carrito;
                 }
-                ButtonComprar.Visible = true;
+               PanelComprar.Visible = true;
 
             }
         }

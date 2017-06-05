@@ -219,5 +219,46 @@ namespace WebApplication2.App_Code
             return categorias;
         }
 
+        public static int ultimaVenta()
+        {
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "SELECT TOP 1 ID_VENTA FROM TAB_VENTA ORDER BY ID_VENT DESC";
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            DataTable tabla = new DataTable();
+            conCadena.Fill(tabla);
+            int idVenta = 0;
+             foreach (DataRow row in tabla.Rows)
+            {
+                idVenta = (int)row[0];
+              
+            }
+            con.Close();
+            return idVenta;
+         
+        }
+
+        public static int IdUsuario(int rut)
+        {
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "SELECT ID_USUARIO FROM TAB_USUARIOS WHERE RUT="+rut;
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            DataTable tabla = new DataTable();
+            conCadena.Fill(tabla);
+            int idVenta = 0;
+            foreach (DataRow row in tabla.Rows)
+            {
+                idVenta = (int)row[0];
+
+            }
+            con.Close();
+            return idVenta;
+
+        }
+
+       
     }
 }

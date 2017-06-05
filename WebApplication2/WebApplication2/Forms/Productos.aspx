@@ -7,6 +7,7 @@
 
     <div id="puser">
         <div>
+         
         <asp:Label ID="Label1" runat="server" Text="Usuario :"></asp:Label>
         <asp:TextBox ID="TextBoxUsuario" runat="server"></asp:TextBox> 
     </div>

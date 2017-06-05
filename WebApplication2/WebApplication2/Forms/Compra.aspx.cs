@@ -27,7 +27,10 @@ namespace WebApplication2.Forms
               carrito = (List<Producto>)Session["carrito"];
                 GridViewCarrito.DataSource = carrito;
                 GridViewCarrito.DataBind();
+                LabelTotal.Text += totalizar(carrito);
+
             }
+           
             
         }
 
@@ -35,6 +38,41 @@ namespace WebApplication2.Forms
         {
             Session.Abandon();
             Response.Redirect("~/Forms/Principal.aspx");
+        }
+
+        public int totalizar(List<Producto> productos)
+        {
+            int total = 0;
+            foreach (var item in productos)
+            {
+                total += item.Precio;
+            }
+            return total;
+        }
+
+        protected void ButtonPagar_Click(object sender, EventArgs e)
+        {
+            Venta v = new Venta();
+            List<Producto> carrito = new List<Producto>();
+            carrito = (List<Producto>)Session["carrito"];
+            v.Total = totalizar(carrito);
+            v.Fecha = DateTime.Now;
+            if (Agregar.AgregarVenta(v)==false)
+            {
+                this.Page.Response.Write("<script language='JavaScript'>window.alert('error al procesar la venta');</script>");
+            }
+           
+            Usuario user = (Usuario)Session["user"];
+            int idVenta = Buscar.ultimaVenta();
+            int idUsuario = Buscar.IdUsuario(user.Rut);
+            foreach (var item in carrito)
+            {
+                if (!Agregar.AgregarDetalle(idVenta, idUsuario,item.Id))
+                {
+                    this.Page.Response.Write("<script language='JavaScript'>window.alert('error al procesar la venta');</script>");
+                }
+            }
+            Response.Redirect("~/Forms/Total.aspx");
         }
     }
 }
