@@ -57,6 +57,7 @@ namespace WebApplication2.Forms
             carrito = (List<Producto>)Session["carrito"];
             v.Total = totalizar(carrito);
             v.Fecha = DateTime.Now;
+            Session["venta"] = v;
             if (Agregar.AgregarVenta(v)==false)
             {
                 this.Page.Response.Write("<script language='JavaScript'>window.alert('error al procesar la venta');</script>");
@@ -72,7 +73,7 @@ namespace WebApplication2.Forms
                     this.Page.Response.Write("<script language='JavaScript'>window.alert('error al procesar la venta');</script>");
                 }
             }
-            Response.Redirect("~/Forms/Total.aspx");
+            Response.Redirect("~/Forms/Boleta.aspx");
         }
     }
 }

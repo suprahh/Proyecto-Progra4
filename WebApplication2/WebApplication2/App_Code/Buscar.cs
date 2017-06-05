@@ -224,7 +224,7 @@ namespace WebApplication2.App_Code
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "SELECT TOP 1 ID_VENTA FROM TAB_VENTA ORDER BY ID_VENT DESC";
+            string consulta = "SELECT TOP 1 ID_VENT FROM TAB_VENTA ORDER BY ID_VENT DESC";
             SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);

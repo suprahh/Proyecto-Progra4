@@ -66,7 +66,7 @@ namespace WebApplication2.App_Code
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "insert into TAB_VENTA(FECHA_VENT, TOTAL_VENT) values (" +v.Fecha+","+v.Total+")";
+            string consulta = "insert into TAB_VENTA(FECHA_VENT, TOTAL_VENT) values ('" +v.Fecha+"',"+v.Total+")";
                                                                                                                                 
             SqlCommand conCadena = new SqlCommand(consulta, con);
             if (conCadena.ExecuteNonQuery() == 1)
@@ -87,7 +87,7 @@ namespace WebApplication2.App_Code
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "insert into TAB_DETALLE(ID_VENTA, ID_USUARIO) values (" + IdV + "," + IdU + ","+IdPro+")";
+            string consulta = "insert into TAB_DETALLE(ID_VENTA, ID_USUARIO, ID_PRODUCTO) values (" + IdV + "," + IdU + ","+IdPro+")";
 
             SqlCommand conCadena = new SqlCommand(consulta, con);
             if (conCadena.ExecuteNonQuery() == 1)
