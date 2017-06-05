@@ -71,7 +71,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\StyleSheet1.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\Boleta.aspx" />
+    <Content Include="Forms\Compra.aspx" />
     <Content Include="Forms\Contacto.aspx" />
     <Content Include="Forms\MantenedorProductos.aspx" />
     <Content Include="Forms\Principal.aspx" />
@@ -83,10 +84,6 @@
     <Content Include="Global.asax" />
     <Content Include="Forms\MantenedorUsuarios.aspx" />
     <Content Include="packages.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
@@ -122,12 +119,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\Agregar.cs" />
+    <Compile Include="App_Code\Categoria.cs" />
     <Compile Include="App_Code\Conexion.cs" />
     <Compile Include="App_Code\Buscar.cs" />
+<<<<<<< HEAD
     <Content Include="App_Code\Conexion2.cs" />
     <Content Include="App_Code\Eliminar.cs" />
+=======
+    <Compile Include="App_Code\Conexion2.cs" />
+    <Compile Include="App_Code\Eliminar.cs" />
+>>>>>>> aca133bc0131287ef185c5d87d58fb45a5a70059
     <Compile Include="App_Code\Producto.cs" />
     <Compile Include="App_Code\Usuario.cs" />
+    <Compile Include="App_Code\Venta.cs" />
+    <Compile Include="Forms\Boleta.aspx.cs">
+      <DependentUpon>Boleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Boleta.aspx.designer.cs">
+      <DependentUpon>Boleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Compra.aspx.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Compra.aspx.designer.cs">
+      <DependentUpon>Compra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
