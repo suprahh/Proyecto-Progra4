@@ -6,11 +6,6 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <asp:Panel ID="PanelLogin" runat="server">
-          <div id="divLogo">
-              <img src="FotosEstilo/Logo.png" id="logo" /> 
-            </div>
-
-
     <div id="puser">
         <div>
         <asp:Label ID="Label1" runat="server" Text="Usuario :"></asp:Label>

@@ -69,10 +69,11 @@ namespace WebApplication2.App_Code
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
 
+
             Producto p = new Producto();
             foreach (DataRow row in tabla.Rows)
             {
-
+               
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
                 p.Precio = (int)row[3];
@@ -96,10 +97,11 @@ namespace WebApplication2.App_Code
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
 
-            Producto p = new Producto();
+            
 
             foreach (DataRow row in tabla.Rows)
             {
+                Producto p = new Producto();
                 p.Id = (int)row[0];
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
@@ -123,11 +125,9 @@ namespace WebApplication2.App_Code
             SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
-
-            Producto p = new Producto();
-
             foreach (DataRow row in tabla.Rows)
             {
+                Producto p = new Producto();
                 p.Id = (int)row[0];
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
@@ -146,15 +146,16 @@ namespace WebApplication2.App_Code
             Conexion cadena = new Conexion();
             SqlConnection con = new SqlConnection(cadena.Conectar());
             con.Open();
-            string consulta = "select * from TAB_PRODUCTO where ID_CAT = " + categoria;
+            string consulta = "select * from TAB_PRODUCTO where ID_CAT =  "+ categoria;
             SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
             DataTable tabla = new DataTable();
             conCadena.Fill(tabla);
 
-            Producto p = new Producto();
+          
 
             foreach (DataRow row in tabla.Rows)
             {
+                Producto p = new Producto();
                 p.Id = (int)row[0];
                 p.Nombre = (string)row[1];
                 p.Descripcion = (string)row[2];
@@ -194,6 +195,29 @@ namespace WebApplication2.App_Code
             return user;
         }
 
+        public static List<Categoria> buscarCategorias()
+        {
+            List<Categoria> categorias = new List<Categoria>();
+            Conexion cadena = new Conexion();
+            SqlConnection con = new SqlConnection(cadena.Conectar());
+            con.Open();
+            string consulta = "select * from TAB_CATEGORIA" ;
+            SqlDataAdapter conCadena = new SqlDataAdapter(consulta, con);
+            DataTable tabla = new DataTable();
+            conCadena.Fill(tabla);
+
+
+            foreach (DataRow row in tabla.Rows)
+            {
+
+                Categoria c = new Categoria();
+                c.Id = (int)row[0];
+                c.Nombre = (string)row[1];
+                categorias.Add(c);
+            }
+            con.Close();
+            return categorias;
+        }
 
     }
 }

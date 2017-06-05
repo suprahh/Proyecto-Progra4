@@ -22,6 +22,11 @@ namespace WebApplication2.Forms
                 PanelBienvenida.Visible = true;
                 PanelLogin.Visible = false;
             }
+            if (Session["carrito"]!=null)
+            {
+                PanelComprar.Visible = true;
+            }
+     
         }
         protected void ButtonIngresar_Click(object sender, EventArgs e)
         {
@@ -68,6 +73,50 @@ namespace WebApplication2.Forms
             PanelLogin.Visible = false;
             PanelLogin.Visible = true;
             Session.Abandon();
+        }
+
+     
+
+
+        protected void DropDownListCategoriasB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewProductos.DataSource = Buscar.BproductoCategoria(DropDownListCategoriasB.SelectedValue);
+            GridViewProductos.DataBind();
+        }
+
+        protected void GridViewProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<Producto> carrito = new List<Producto>();
+            if (Session["user"]==null)
+            {
+                this.Page.Response.Write("<script language='JavaScript'>window.alert('debes inciar session para agregar al carro');</script>");
+            }
+            else
+            {
+                GridViewRow fila = GridViewProductos.SelectedRow;
+
+               int idProducto = Convert.ToInt32( GridViewProductos.DataKeys[fila.RowIndex].Value);
+                Producto p = Buscar.BproductoId(idProducto);
+
+                if (Session["carrito"]==null)
+                {
+                    carrito.Add(p);
+                    Session["carrito"] = carrito;
+                }
+                else
+                {
+                    carrito = (List<Producto>)Session["carrito"];
+                    carrito.Add(p);
+                    Session["carrito"] = carrito;
+                }
+                ButtonComprar.Visible = true;
+
+            }
+        }
+
+        protected void ButtonComprar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Forms/Compra.aspx");
         }
     }
 }

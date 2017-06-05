@@ -9,7 +9,7 @@ namespace WebApplication2.App_Code
     {
         public string Conectar2()
         {
-            string cadena = "Data Source=DESKTOP-L16B02J\SQLEXPRESS;Initial Catalog=PcFastory;Integrated Security=True";
+            string cadena = "Data Source=DESKTOP-L16B02J\\SQLEXPRESS;Initial Catalog=PcFastory;Integrated Security=True";
             return cadena;
 
         }
